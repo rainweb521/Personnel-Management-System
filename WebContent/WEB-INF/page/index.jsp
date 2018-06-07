@@ -79,13 +79,13 @@
                 </a>
                 <ul class="sub-menu">
                     <li>
-                        <a _href="dept/list">
+                        <a _href="${ctx }/dept/list">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>部门列表</cite>
                         </a>
                     </li >
                     <li>
-                        <a _href="order-list.html">
+                        <a _href="${ctx }/dept/add">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>添加部门</cite>
                         </a>

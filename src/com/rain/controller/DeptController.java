@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -36,13 +37,43 @@ public class DeptController {
 	
 	@RequestMapping(value="/dept/list",method=RequestMethod.GET)
 	 public String index(Model model){
-		System.out.println("4234");
+//		System.out.println("4234");
 		List<Dept> dept_list = rainservice.findAllDept();
 		model.addAttribute("list",dept_list);
-		for(Dept attribute : dept_list) {
-			  System.out.println(attribute.getName());
-			}
+//		for(Dept attribute : dept_list) {
+//			  System.out.println(attribute.getName());
+//			}
 		return "dept/list";
 	}
-	
+	@RequestMapping(value="/dept/add",method=RequestMethod.GET)
+	 public String add(Model model,Integer id){
+//		System.out.println(id);
+		if(id!=null){
+			Dept dept = rainservice.get_Info(id);
+			model.addAttribute("dept",dept);
+//			System.out.println(dept.getName());
+		}
+		return "/dept/add";
+	}
+	@RequestMapping(value="/dept/add",method=RequestMethod.POST)
+	 public ModelAndView add(ModelAndView mv,@ModelAttribute Dept dept ,Integer id){
+		System.out.println(id);
+//		System.out.println(dept.getId());
+		if(id!=null){
+			rainservice.update_Info(dept);
+			System.out.println(dept.getId());
+		}else{
+			rainservice.addDept(dept);
+		}
+//		System.out.println(dept.getName());
+		mv.setViewName("redirect:/dept/list");
+		return mv;
+	}
+	@RequestMapping(value="/dept/delete",method=RequestMethod.GET)
+	 public void delete(Integer id){
+		System.out.println(id);
+		if(id!=null){
+			rainservice.delete_Info(id);
+		}
+	}
 }
