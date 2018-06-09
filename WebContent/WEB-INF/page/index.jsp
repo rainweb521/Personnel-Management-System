@@ -95,14 +95,20 @@
             <li>
                 <a href="javascript:;">
                     <i class="iconfont">&#xe723;</i>
-                    <cite>职工管理</cite>
+                    <cite>职位管理</cite>
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>
                 <ul class="sub-menu">
                     <li>
-                        <a _href="cate.html">
+                        <a _href="${ctx }/job/list">
                             <i class="iconfont">&#xe6a7;</i>
-                            <cite>多级分类</cite>
+                            <cite>职位列表</cite>
+                        </a>
+                    </li >
+                     <li>
+                        <a _href="${ctx }/job/list">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>添加职位</cite>
                         </a>
                     </li >
                 </ul>
@@ -127,7 +133,7 @@
             <li>
                 <a href="javascript:;">
                     <i class="iconfont">&#xe6ce;</i>
-                    <cite>公告统计</cite>
+                    <cite>公告管理</cite>
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>
                 <ul class="sub-menu">

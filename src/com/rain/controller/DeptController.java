@@ -36,9 +36,13 @@ public class DeptController {
 	}
 	
 	@RequestMapping(value="/dept/list",method=RequestMethod.GET)
-	 public String index(Model model){
+	 public String index(Model model,String content){
 //		System.out.println("4234");
 		List<Dept> dept_list = rainservice.findAllDept();
+		if (content!=null){
+			dept_list = rainservice.findAllDept(content);
+		}
+		
 		model.addAttribute("list",dept_list);
 //		for(Dept attribute : dept_list) {
 //			  System.out.println(attribute.getName());

@@ -9,7 +9,9 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.rain.dao.DeptDao;
+import com.rain.dao.JobDao;
 import com.rain.domain.Dept;
+import com.rain.domain.Job;
 import com.rain.service.RainService;
 
 @Transactional(propagation=Propagation.REQUIRED,isolation=Isolation.DEFAULT)
@@ -18,6 +20,9 @@ public class RainServiceImpl implements RainService{
 
 	@Autowired
 	private DeptDao deptDao;
+	@Autowired
+	private JobDao jobDao;
+	
 	@Transactional(readOnly=true)
 	@Override
 	public List<Dept> findAllDept() {
@@ -45,6 +50,29 @@ public class RainServiceImpl implements RainService{
 		// TODO Auto-generated method stub
 		deptDao.delete_Info(id);
 	}
-
+	@Override
+	public List<Dept> findAllDept(String content) {
+		// TODO Auto-generated method stub
+		System.out.println(content);
+		return deptDao.selectLikeAllDept(content);
+	}
+	/**
+	 * 职位管理的操作
+	 */
+	@Override
+	public List<Job> findAllJob() {
+		// TODO Auto-generated method stub
+		return jobDao.get_List();
+	}
+	@Override
+	public List<Job> findAllJob(String content) {
+		// TODO Auto-generated method stub
+		return jobDao.get_LikeList(content);
+	}
+	@Override
+	public void addJob(Job job) {
+		// TODO Auto-generated method stub
+		jobDao.save(job);
+	}
 	
 }

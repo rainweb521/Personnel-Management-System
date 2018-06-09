@@ -35,7 +35,7 @@
     </div>
     <div class="x-body">
       <div class="layui-row" style="" align="center">
-        <form class="layui-form layui-col-md12 x-so" method="get" action="${ctx }/dept/list">
+        <form class="layui-form layui-col-md12 x-so" method="get" action="${ctx }/job/list">
           <!-- <input class="layui-input" placeholder="开始日" name="start" id="start">
           <input class="layui-input" placeholder="截止日" name="end" id="end"> -->
           <input type="text" name="content" style="width:50%;"  placeholder="请输入查找内容" autocomplete="off" class="layui-input">
@@ -56,7 +56,7 @@
               <div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>
             </th>
             <th>ID</th>
-            <th>部门名称</th>
+            <th>职位名称</th>
             <th>详细信息</th>
          <!-- <th>状态</th> -->
             <th>操作</th>
