@@ -106,7 +106,7 @@
                         </a>
                     </li >
                      <li>
-                        <a _href="${ctx }/job/list">
+                        <a _href="${ctx }/job/add">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>添加职位</cite>
                         </a>
@@ -122,12 +122,17 @@
                 </a>
                 <ul class="sub-menu">
                     <li>
-                        <a _href="admin-list.html">
+                        <a _href="${ctx }/employee/list">
                             <i class="iconfont">&#xe6a7;</i>
-                            <cite>管理员列表</cite>
+                            <cite>员工列表</cite>
                         </a>
                     </li >
-                   
+                    <li>
+                        <a _href="${ctx }/employee/add">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>添加员工</cite>
+                        </a>
+                    </li >
                 </ul>
             </li>
             <li>

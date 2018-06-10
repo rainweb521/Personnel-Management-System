@@ -5,7 +5,7 @@
   
   <head>
     <meta charset="UTF-8">
-    <title>职位信息</title>
+    <title>员工列表</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
@@ -27,14 +27,14 @@
       <span class="layui-breadcrumb">
         <a href="">首页</a>
         <a>
-          <cite>职位信息</cite></a>
+          <cite>员工列表</cite></a>
       </span>
-      <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="${ctx }/job/list" title="刷新">
+      <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="${ctx }/employee/list" title="刷新">
         <i class="layui-icon" style="line-height:30px">ဂ</i></a>
     </div>
     <div class="x-body">
       <div class="layui-row" style="" align="center">
-        <form class="layui-form layui-col-md12 x-so" method="get" action="${ctx }/job/list">
+        <form class="layui-form layui-col-md12 x-so" method="get" action="${ctx }/employee/list">
           <!-- <input class="layui-input" placeholder="开始日" name="start" id="start">
           <input class="layui-input" placeholder="截止日" name="end" id="end"> -->
           <input type="text" name="content" style="width:50%;"  placeholder="请输入查找内容" autocomplete="off" class="layui-input">
@@ -54,9 +54,17 @@
             <th>
               <div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>
             </th>
-            <th>ID</th>
-            <th>职位</th>
-            <th>信息</th>
+            <th>姓名</th>
+            <th>性别</th>
+         <th>手机号码</th>
+         <th>邮箱</th>
+         <th>职位</th>
+         <th>学历</th>
+         <th>身份证号码</th>
+         <th>部门</th>
+         <th>联系地址</th>
+         <th>建档日期</th>
+         <!-- <th>状态</th> -->
             <th>操作</th>
         </thead>
         <tbody>
@@ -65,9 +73,16 @@
             <td>
               <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
             </td>
-            <td>${dept.id}</td>
             <td>${dept.name }</td>
-            <td>${dept.remark }</td>
+            <td>${dept.sex }</td>
+            <td>${dept.phone }</td>
+            <td>${dept.email }</td>
+            <td>${dept.job.name }</td>
+            <td>${dept.education }</td>
+            <td>${dept.card_id }</td>
+            <td>${dept.dept.name }</td>
+            <td>${dept.address }</td>
+            <td>${dept.create_date }</td>
             
            <!--  <td class="td-status">
               <span class="layui-btn layui-btn-normal layui-btn-mini">已启用</span></td> -->
@@ -76,7 +91,7 @@
                 <i class="layui-icon">&#xe601;</i>
               </a> -->
               <%-- <a title="编辑"  onclick="x_admin_show('编辑','${ctx}/job/add?id=${dept.id }');" href="javascript:;"> --%>
-              <a title="编辑"  href="${ctx}/job/add?id=${dept.id }">
+              <a title="编辑"  href="${ctx}/employee/add?id=${dept.id }">
                 <i class="layui-icon">&#xe642;</i>
               </a>
               <a title="删除" onclick="member_del(this,'${dept.id }')" href="javascript:;">
@@ -148,7 +163,7 @@
           layer.confirm('确认要删除吗？',function(index){
               //发异步删除数据
               //等以后再使用异步，这里先使用
-              $.get("${ctx}/job/delete?id="+id);
+              $.get("${ctx}/employee/delete?id="+id);
               $(obj).parents("tr").remove();
               layer.msg('已删除!',{icon:1,time:1000});
           });
