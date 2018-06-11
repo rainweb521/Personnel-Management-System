@@ -3,8 +3,10 @@ package com.rain.service;
 import java.util.List;
 
 import com.rain.domain.Dept;
+import com.rain.domain.Document;
 import com.rain.domain.Employee;
 import com.rain.domain.Job;
+import com.rain.domain.Notice;
 
 public interface RainService {
 	/**
@@ -48,5 +50,29 @@ public interface RainService {
 	void update_EmployeeInfo(Employee data);
 	void insert_EmployeeInfo(Employee data);
 	void delete_EmployeeInfo(Integer id);
+
+	List<Notice> get_NoticeList();
+
+	List<Notice> get_NoticeLikeList(String content);
+
+	Notice get_NoticeInfo(Integer id);
+
+	void update_NoticeInfo(Notice notice);
+
+	void insert_NoticeInfo(Notice notice);
+
+	void delete_NoticeInfo(Integer id);
+
+	List<Document> get_DocumentList();
+
+	List<Document> get_DocumentLikeList(String content);
+
+	Document get_DocumentInfo(Integer id);
+
+	void update_DocumentInfo(Document notice);
+
+	void insert_DocumentInfo(Document notice);
+
+	void delete_DocumentInfo(Integer id);
 	
 }

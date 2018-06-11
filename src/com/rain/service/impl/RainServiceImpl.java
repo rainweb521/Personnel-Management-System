@@ -13,9 +13,13 @@ import org.springframework.transaction.annotation.Transactional;
 import com.rain.dao.DeptDao;
 import com.rain.dao.EmployeeDao;
 import com.rain.dao.JobDao;
+import com.rain.dao.NoticeDao;
+import com.rain.dao.DocumentDao;
 import com.rain.domain.Dept;
+import com.rain.domain.Document;
 import com.rain.domain.Employee;
 import com.rain.domain.Job;
+import com.rain.domain.Notice;
 import com.rain.service.RainService;
 
 @Transactional(propagation=Propagation.REQUIRED,isolation=Isolation.DEFAULT)
@@ -28,6 +32,10 @@ public class RainServiceImpl implements RainService{
 	private JobDao jobDao;
 	@Autowired
 	private EmployeeDao employeedao;
+	@Autowired
+	private NoticeDao noticedao;
+	@Autowired
+	private DocumentDao documentdao;
 
 	/**
 	 * 部门信息的管理
@@ -172,5 +180,71 @@ public class RainServiceImpl implements RainService{
 	public void delete_EmployeeInfo(Integer id) {
 		// TODO Auto-generated method stub
 		employeedao.delete_Info(id);
+	}
+	/**
+	 * 公告管理
+	 */
+	@Override
+	public List<Notice> get_NoticeList() {
+		// TODO Auto-generated method stub
+		return noticedao.get_List();
+	}
+	@Override
+	public List<Notice> get_NoticeLikeList(String content) {
+		// TODO Auto-generated method stub
+		return noticedao.get_LikeList(content);
+	}
+	@Override
+	public Notice get_NoticeInfo(Integer id) {
+		// TODO Auto-generated method stub
+		return noticedao.get_Info(id);
+	}
+	@Override
+	public void update_NoticeInfo(Notice notice) {
+		// TODO Auto-generated method stub
+		noticedao.update_Info(notice);
+	}
+	@Override
+	public void insert_NoticeInfo(Notice notice) {
+		// TODO Auto-generated method stub
+		noticedao.insert_Info(notice);
+	}
+	@Override
+	public void delete_NoticeInfo(Integer id) {
+		// TODO Auto-generated method stub
+		noticedao.delete_Info(id);
+	}
+	/**
+	 * 文档管理
+	 */
+	@Override
+	public List<Document> get_DocumentList() {
+		// TODO Auto-generated method stub
+		return documentdao.get_List();
+	}
+	@Override
+	public List<Document> get_DocumentLikeList(String content) {
+		// TODO Auto-generated method stub
+		return documentdao.get_LikeList(content);
+	}
+	@Override
+	public Document get_DocumentInfo(Integer id) {
+		// TODO Auto-generated method stub
+		return documentdao.get_Info(id);
+	}
+	@Override
+	public void update_DocumentInfo(Document notice) {
+		// TODO Auto-generated method stub
+		documentdao.update_Info(notice);
+	}
+	@Override
+	public void insert_DocumentInfo(Document notice) {
+		// TODO Auto-generated method stub
+		documentdao.insert_Info(notice);
+	}
+	@Override
+	public void delete_DocumentInfo(Integer id) {
+		// TODO Auto-generated method stub
+		documentdao.delete_Info(id);
 	}
 }

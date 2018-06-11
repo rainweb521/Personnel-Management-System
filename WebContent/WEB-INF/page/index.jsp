@@ -143,9 +143,15 @@
                 </a>
                 <ul class="sub-menu">
                     <li>
-                        <a _href="echarts1.html">
+                        <a _href="${ctx }/notice/list">
                             <i class="iconfont">&#xe6a7;</i>
-                            <cite>拆线图</cite>
+                            <cite>公告查询</cite>
+                        </a>
+                    </li >
+                    <li>
+                        <a _href="${ctx }/notice/add">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>添加公告</cite>
                         </a>
                     </li >
                    
@@ -160,9 +166,15 @@
                 </a>
                 <ul class="sub-menu">
                     <li>
-                        <a _href="unicode.html">
+                        <a _href="${ctx }/document/list">
                             <i class="iconfont">&#xe6a7;</i>
-                            <cite>图标对应字体</cite>
+                            <cite>文档查询</cite>
+                        </a>
+                    </li>
+                    <li>
+                        <a _href="${ctx }/document/add">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>上传文档</cite>
                         </a>
                     </li>
                 </ul>
