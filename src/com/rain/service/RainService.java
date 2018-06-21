@@ -2,6 +2,7 @@ package com.rain.service;
 
 import java.util.List;
 
+import com.rain.domain.User;
 import com.rain.domain.Dept;
 import com.rain.domain.Document;
 import com.rain.domain.Employee;
@@ -74,5 +75,19 @@ public interface RainService {
 	void insert_DocumentInfo(Document notice);
 
 	void delete_DocumentInfo(Integer id);
+
+	User login(String loginname, String password);
+
+	List<User> get_UserList();
+
+	List<User> get_UserLikeList(String content);
+
+	User get_UserInfo(Integer id);
+
+	void update_UserInfo(User notice);
+
+	void insert_UserInfo(User notice);
+
+	void delete_UserInfo(Integer id);
 	
 }

@@ -14,12 +14,14 @@ import com.rain.dao.DeptDao;
 import com.rain.dao.EmployeeDao;
 import com.rain.dao.JobDao;
 import com.rain.dao.NoticeDao;
+import com.rain.dao.UserDao;
 import com.rain.dao.DocumentDao;
 import com.rain.domain.Dept;
 import com.rain.domain.Document;
 import com.rain.domain.Employee;
 import com.rain.domain.Job;
 import com.rain.domain.Notice;
+import com.rain.domain.User;
 import com.rain.service.RainService;
 
 @Transactional(propagation=Propagation.REQUIRED,isolation=Isolation.DEFAULT)
@@ -36,6 +38,8 @@ public class RainServiceImpl implements RainService{
 	private NoticeDao noticedao;
 	@Autowired
 	private DocumentDao documentdao;
+	@Autowired
+	private UserDao userdao;
 
 	/**
 	 * 部门信息的管理
@@ -207,6 +211,11 @@ public class RainServiceImpl implements RainService{
 	@Override
 	public void insert_NoticeInfo(Notice notice) {
 		// TODO Auto-generated method stub
+//		Date date = new Date();    
+//		String year = String.format("%tY", date);   
+//		String month = String.format("%tB", date);   
+//		String day = String.format("%te", date);   
+//		notice.setCreate_date(year+month+day);
 		noticedao.insert_Info(notice);
 	}
 	@Override
@@ -240,11 +249,57 @@ public class RainServiceImpl implements RainService{
 	@Override
 	public void insert_DocumentInfo(Document notice) {
 		// TODO Auto-generated method stub
+//		Date date = new Date();    
+//		String year = String.format("%tY", date);   
+//		String month = String.format("%tB", date);   
+//		String day = String.format("%te", date);   
+//		notice.setCreate_date(year+month+day);
 		documentdao.insert_Info(notice);
 	}
 	@Override
 	public void delete_DocumentInfo(Integer id) {
 		// TODO Auto-generated method stub
 		documentdao.delete_Info(id);
+	}
+	@Override
+	public User login(String loginname, String password) {
+		// TODO Auto-generated method stub
+		User user = userdao.get_login(loginname,password);
+		return user;
+	}
+	@Override
+	public List<User> get_UserList() {
+		// TODO Auto-generated method stub
+		return userdao.get_List();
+	}
+	@Override
+	public List<User> get_UserLikeList(String content) {
+		// TODO Auto-generated method stub
+		return userdao.get_LikeList(content);
+	}
+	@Override
+	public User get_UserInfo(Integer id) {
+		// TODO Auto-generated method stub
+		return userdao.get_Info(id);
+	}
+	@Override
+	public void update_UserInfo(User notice) {
+		// TODO Auto-generated method stub
+		userdao.update_Info(notice);
+	}
+	@Override
+	public void insert_UserInfo(User notice) {
+		// TODO Auto-generated method stub
+//		Date date = new Date();    
+//		String year = String.format("%tY", date);   
+//		String month = String.format("%tB", date);   
+//		String day = String.format("%te", date);   
+//		notice.setCreate_date(year+month+day);
+		userdao.insert_Info(notice);
+	}
+	@Override
+	public void delete_UserInfo(Integer id) {
+		// TODO Auto-generated method stub
+		userdao.delete_Info(id);
 	}
 }

@@ -17,6 +17,15 @@
     <mvc:annotation-driven/>
     <!-- 使用默认的Servlet来响应静态文件 -->
     <mvc:default-servlet-handler/>
+        <!-- 定义Spring MVC的拦截器 -->
+    <mvc:interceptors>
+    	<mvc:interceptor>
+    		<!-- 拦截所有请求 -->
+    		<mvc:mapping path="/*"/>
+    		<!-- 自定义判断用户权限的拦截类 -->  
+    	 	<bean class="com.rain.interceptor.AuthorizedInterceptor"/>
+    	</mvc:interceptor>
+    </mvc:interceptors>
     <!-- 视图解析器  -->
      <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver"> 

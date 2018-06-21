@@ -55,14 +55,14 @@
                 </a>
                 <ul class="sub-menu">
                     <li>
-                        <a _href="member-list.html">
+                        <a _href="${ctx }/user/list">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>用户列表</cite>
                             
                         </a>
                     </li >
                     <li>
-                        <a _href="member-del.html">
+                        <a _href="${ctx }/user/add">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>添加用户</cite>
                             

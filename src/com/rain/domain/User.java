@@ -8,7 +8,7 @@ public class User implements Serializable {
 	private String loginname;
 	private String password;
 	private Integer status;
-	private String createdate;
+	private String create_date;
 	
 	public User(){
 		super();
@@ -44,11 +44,11 @@ public class User implements Serializable {
 	public void setStatus(Integer status) {
 		this.status = status;
 	}
-	public String getCreatedate() {
-		return createdate;
+	public String getCreate_date() {
+		return create_date;
 	}
-	public void setCreatedate(String createdate) {
-		this.createdate = createdate;
+	public void setCreate_date(String create_date) {
+		this.create_date = create_date;
 	}
 	
 }
