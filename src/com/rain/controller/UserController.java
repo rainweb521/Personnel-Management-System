@@ -32,6 +32,15 @@ public class UserController {
 			mv.setViewName("/user/list");
 			return mv;
 		}
+//		退出功能
+		@RequestMapping(value="/user/logout")
+		 public ModelAndView logout(ModelAndView mv, HttpSession session){
+			session.setAttribute(Constants.USER_SESSION, null);
+			session.setAttribute("tip", null);
+			mv.setViewName("redirect:/index");
+			
+			return mv;
+		}
 		@RequestMapping(value="/login")
 		 public ModelAndView login(@RequestParam("loginname") String loginname,
 				 @RequestParam("password") String password,
@@ -97,5 +106,24 @@ public class UserController {
 			if(id!=null){
 				rainservice.delete_UserInfo(id);
 			}
+		}
+//		管理员自己修改密码时跳转的页面 
+		@RequestMapping(value="/user/myupdate",method=RequestMethod.GET)
+		 public String update(Model model,HttpSession session){
+			User user = (User) session.getAttribute(Constants.USER_SESSION);
+			model.addAttribute("job",user);
+			return "/user/myupdate";
+		}
+		@RequestMapping(value="/user/myupdate",method=RequestMethod.POST)
+		 public ModelAndView update(ModelAndView mv,Model model,HttpSession session,User notice){
+			User user = (User) session.getAttribute(Constants.USER_SESSION);
+//			如果是自己修改自己的密码，则更新session
+			user.setLoginname(notice.getLoginname());
+			user.setPassword(notice.getPassword());
+			user.setUsername(notice.getUsername());
+			rainservice.update_UserInfo(user);
+				session.setAttribute(Constants.USER_SESSION, user);
+				mv.setViewName("redirect:/user/myupdate");
+				return mv;
 		}
 }
