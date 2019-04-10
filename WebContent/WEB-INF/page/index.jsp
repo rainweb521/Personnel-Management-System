@@ -30,7 +30,7 @@
         
         <ul class="layui-nav right" lay-filter="">
           <li class="layui-nav-item">
-            <a href="javascript:;">${sessionScope.user_session.loginname }</a>
+            <a href="javascript:;">${sessionScope.user_session.username }</a>
             <dl class="layui-nav-child"> <!-- 二级菜单 -->
               <dd><a onclick="x_admin_show('个人信息','${ctx }/user/myupdate')">个人信息</a></dd>
               <dd><a onclick="x_admin_show('切换帐号','${ctx}/user/logout">切换帐号</a></dd>
@@ -202,7 +202,7 @@
     <!-- 中部结束 -->
     <!-- 底部开始 -->
     <div class="footer">
-        <div class="copyright">Copyright ©2017 x-admin v2.3 All Rights Reserved</div>  
+        <div class="copyright">Copyright ©2019 Rain</div>  
     </div>
     <!-- 底部结束 -->
  

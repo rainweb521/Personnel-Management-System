@@ -16,7 +16,7 @@
     <body>
     <div class="x-body layui-anim layui-anim-up">
         <blockquote class="layui-elem-quote">欢迎管理员：
-            <span class="x-red">test</span>！当前时间:2018-04-25 20:50:53</blockquote>
+            <span class="x-red">${sessionScope.user_session.username }</span>！当前时间:2018-04-25 20:50:53-------这些数据都是假的，认真你就输了</blockquote>
         <fieldset class="layui-elem-field">
             <legend>数据统计</legend>
             <div class="layui-field-box">
@@ -145,16 +145,16 @@
                         <tr>
                             <th>版权所有</th>
                             <td>xxxxx(xxxx)
-                                <a href="http://www.xxx.com/" class='x-a' target="_blank">访问官网</a></td>
+                                </td>
                         </tr>
                         <tr>
                             <th>开发者</th>
-                            <td>马志斌(113664000@qq.com)</td></tr>
+                            <td></td></tr>
                     </tbody>
                 </table>
             </div>
         </fieldset>
-        <blockquote class="layui-elem-quote layui-quote-nm">感谢layui,百度Echarts,jquery,本系统由x-admin提供技术支持。</blockquote>
+        <blockquote class="layui-elem-quote layui-quote-nm">这里是底部。</blockquote>
     </div>
         <script>
         var _hmt = _hmt || [];
