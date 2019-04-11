@@ -97,7 +97,7 @@
           
         </tbody>
       </table>
-      <div class="page">
+     <!--  <div class="page">
         <div>
           <a class="prev" href="">&lt;&lt;</a>
           <a class="num" href="">1</a>
@@ -106,7 +106,7 @@
           <a class="num" href="">489</a>
           <a class="next" href="">&gt;&gt;</a>
         </div>
-      </div>
+      </div> -->
 
     </div>
     <script>
