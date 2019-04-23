@@ -74,7 +74,13 @@
               <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
             </td>
             <td>${dept.name }</td>
-            <td>${dept.sex }</td>
+            <td>
+             <c:choose>
+					        	<c:when test="${dept.sex == 1 }">男</c:when>
+					        	<c:otherwise>女</c:otherwise>
+					  </c:choose>
+           
+            </td>
             <td>${dept.phone }</td>
             <td>${dept.email }</td>
             <td>${dept.job.name }</td>
