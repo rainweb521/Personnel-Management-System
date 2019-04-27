@@ -5,6 +5,7 @@ import static com.rain.util.common.Constants.EMPLOYEETABLE;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.SelectProvider;
 
@@ -34,4 +35,7 @@ public interface EmployeeDao {
 			// 根据id删除部门
 			@Delete(" delete from "+EMPLOYEETABLE+" where id = #{id} ")
 			void delete_Info(Integer id);
+			
+			@Select("select * from "+EMPLOYEETABLE+" where name=#{name} and password=#{password}")
+			Employee get_ByInfo(@Param("name") String name, @Param("password") String password);
 }

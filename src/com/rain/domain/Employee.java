@@ -40,7 +40,16 @@ public class Employee implements java.io.Serializable{
 	private String hobby;
 	private String remark;
 	private String create_date;
+	private String password;
 	
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	public Employee(){
 		super();
 	}

@@ -19,6 +19,9 @@ public class EmployeeDynaSqlProvider {
 						if(job.getCard_id()!=null){
 							VALUES("card_id","#{card_id}");
 						}
+						if(job.getPassword()!=null){
+							VALUES("password","#{password}");
+						}
 						if(job.getAddress()!=null){
 							VALUES("address","#{address}");
 						}
@@ -87,6 +90,9 @@ public class EmployeeDynaSqlProvider {
 						}
 						if(job.getAddress()!=null){
 							SET("address = #{address}");
+						}
+						if(job.getPassword()!=null){
+							SET("password = #{password}");
 						}
 						if(job.getPost_code()!=null){
 							SET("post_code = #{post_code}");

@@ -302,4 +302,9 @@ public class RainServiceImpl implements RainService{
 		// TODO Auto-generated method stub
 		userdao.delete_Info(id);
 	}
+	@Override
+	public Employee login2(String loginname, String password) {
+		// TODO Auto-generated method stub
+		return employeedao.get_ByInfo(loginname,password);
+	}
 }

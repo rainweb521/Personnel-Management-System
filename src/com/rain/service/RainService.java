@@ -51,6 +51,7 @@ public interface RainService {
 	void update_EmployeeInfo(Employee data);
 	void insert_EmployeeInfo(Employee data);
 	void delete_EmployeeInfo(Integer id);
+	Employee login2(String loginname, String password);
 
 	List<Notice> get_NoticeList();
 

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.rain.domain.Employee;
 import com.rain.domain.Job;
 import com.rain.domain.Notice;
 import com.rain.domain.User;
@@ -43,26 +44,44 @@ public class UserController {
 		}
 		@RequestMapping(value="/login")
 		 public ModelAndView login(@RequestParam("loginname") String loginname,
-				 @RequestParam("password") String password,
+				 @RequestParam("password") String password,@RequestParam("tip") String tip,
 				 HttpSession session,
 				 ModelAndView mv){
 			// 调用业务逻辑组件判断用户是否可以登录
-			
-			
-			User user = rainservice.login(loginname, password);
-//			System.out.println(user.getLoginname());
-			if(user != null){
-				// 将用户保存到HttpSession当中
-				System.out.println("HttpSession");
-				session.setAttribute(Constants.USER_SESSION, user);
-				// 客户端跳转到main页面
-				mv.setViewName("redirect:/index");
-			}else{
-				// 设置登录失败提示信息
-				System.out.println("设置登录失败提示信息");
-				mv.addObject("message", "登录名或密码错误!请重新输入");
-				// 服务器内部跳转到登录页面
-				mv.setViewName("forward:/loginForm");
+			boolean flag = false;
+			if("1".equals(tip)) {
+				User user = rainservice.login(loginname, password);
+				if(user!=null){
+					// 将用户保存到HttpSession当中
+					System.out.println("HttpSession");
+					session.setAttribute(Constants.USER_SESSION, user);
+					session.setAttribute("tip", "1");
+					// 客户端跳转到main页面
+					mv.setViewName("redirect:/index");
+				}else{
+					// 设置登录失败提示信息
+					System.out.println("设置登录失败提示信息");
+					mv.addObject("message", "登录名或密码错误!请重新输入");
+					// 服务器内部跳转到登录页面
+					mv.setViewName("forward:/loginForm");
+				}
+			}else {
+				Employee user = rainservice.login2(loginname, password);
+				if(user!=null){
+					// 将用户保存到HttpSession当中
+					System.out.println("HttpSession");
+					session.setAttribute(Constants.USER_SESSION, user);
+					session.setAttribute("tip", "2");
+					// 客户端跳转到main页面
+					mv.setViewName("redirect:/indexcustomer/");
+				}else{
+					// 设置登录失败提示信息
+					System.out.println("设置登录失败提示信息");
+					mv.addObject("message", "登录名或密码错误!请重新输入");
+					// 服务器内部跳转到登录页面
+					mv.setViewName("forward:/loginForm");
+				}
+				
 			}
 			return mv;
 		}

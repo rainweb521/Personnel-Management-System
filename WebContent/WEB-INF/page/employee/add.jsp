@@ -37,6 +37,16 @@
              
           </div>
           <div class="layui-form-item" >
+              <label for="username" class="layui-form-label">
+                  <span class="x-red">*</span>密码
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" id="password" name="password" required="" lay-verify="required"
+                  autocomplete="off" class="layui-input" value="${job.password }">
+              </div>
+             
+          </div>
+          <div class="layui-form-item" >
               <label for="phone" class="layui-form-label">
                   <span class="x-red">*</span>身份证号码
               </label>

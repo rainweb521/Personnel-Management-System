@@ -26,7 +26,7 @@
                             <div class="layui-carousel x-admin-carousel x-admin-backlog" lay-anim="" lay-indicator="inside" lay-arrow="none" style="width: 100%; height: 90px;">
                                 <div carousel-item="">
                                     <ul class="layui-row layui-col-space10 layui-this">
-                                        <li class="layui-col-xs2">
+                                      <%--   <li class="layui-col-xs2">
                                             <a href="javascript:;" class="x-admin-backlog-body">
                                                 <h3>文章数</h3>
                                                 <p>
@@ -67,7 +67,7 @@
                                                 <p>
                                                     <cite>6766</cite></p>
                                             </a>
-                                        </li>
+                                        </li> --%>
                                     </ul>
                                 </div>
                             </div>
