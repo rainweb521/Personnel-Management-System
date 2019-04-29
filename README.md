@@ -2,7 +2,7 @@
 
 ## 部署说明：
 基础环境：JDK8，Tomcat8，MySQL5.7
-
+报错可以查看我的教程：[我的教程](https://github.com/rainweb521/My-tutorial)
 2019年4月27日
 ## 加入了普通用户的功能，在登陆时可以选择，可以查询职位，部门，公告，文档，但不能对其他的进行修改。
 ![](WebContent/public/images/s.png)

@@ -183,6 +183,7 @@ public class RainServiceImpl implements RainService{
 	@Override
 	public void delete_EmployeeInfo(Integer id) {
 		// TODO Auto-generated method stub
+		System.out.print(id);
 		employeedao.delete_Info(id);
 	}
 	/**

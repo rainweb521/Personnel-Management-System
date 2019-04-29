@@ -70,7 +70,7 @@ public class EmployeeController {
 		 public void delete(Integer id){
 //			System.out.println(id);
 			if(id!=null){
-				rainservice.delete_JobInfo(id);
+				rainservice.delete_EmployeeInfo(id);
 			}
 		}
 }
