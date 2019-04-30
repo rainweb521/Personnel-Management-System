@@ -60,7 +60,7 @@
                   <span class="x-red">*</span>性别
               </label>
               <div class="layui-input-inline">
-                  <input type="text" id="sex" name="sex" required="" lay-verify="required"
+                  <input type="text" id="sex" name="sex" placeholder="男性请输入1，女性请输入2" required="" lay-verify="required"
                   autocomplete="off" class="layui-input" value="${job.sex }">
               </div>
           </div>

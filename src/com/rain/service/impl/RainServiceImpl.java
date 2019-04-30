@@ -1,5 +1,6 @@
 package com.rain.service.impl;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -174,10 +175,9 @@ public class RainServiceImpl implements RainService{
 		 * 将职位id和部门id提取，或者不管，因为直接存到数据库了，不管
 		 */
 		Date date = new Date();    
-		String year = String.format("%tY", date);   
-		String month = String.format("%tB", date);   
-		String day = String.format("%te", date);   
-		data.setCreate_date(year+month+day);
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		data.setCreate_date(sdf.format(date));
+		System.out.println(data.getPassword()+"0000000000000000");
 		employeedao.insert_Info(data);
 	}
 	@Override
