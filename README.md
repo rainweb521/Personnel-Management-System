@@ -3,6 +3,11 @@
 ## 因为同学答辩已经完成，项目暂时不会再做更新，有需要的朋友可以自行完善。
 
 ## 部署说明：
+
+2019-05-26
+
+由于很多同学反映部署有问题，所以我录了一个视频来演示一下，[人事管理系统部署视频](链接:https://pan.baidu.com/s/1DkT4Pyb6zeEIKNYtL4wvdw)  密码:ty39
+
 基础环境：JDK8，Tomcat8，MySQL5.7
 报错可以查看我的教程：[我的教程](https://github.com/rainweb521/My-tutorial)
 2019年4月27日
