@@ -1,0 +1,134 @@
+
+
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+
+
+.cpt-slider {
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+} 
+
+.cpt-slider .ul-slider {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  font-size: 0;
+} 
+ .cpt-slider .ul-slider .li-slider {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 1360px;
+  height: 360px;
+  list-style: none;
+} 
+ .cpt-slider .ul-slider .li-slider a {
+  display: block;
+  width: 100%;
+  height: 100%;
+} 
+.cpt-slider .slider-selelct {
+  display: none;
+  position: absolute;
+  top: 50%;
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  width: 40px;
+  height: 50px;
+  line-height: 54px;
+  text-align: center;
+  background: rgba(0,0, 0, 0.4);
+  cursor: pointer;
+} 
+
+ .cpt-slider .slider-selelct i {
+  color: rgba(255, 255, 255, 1);
+  font-size: 20px;
+} 
+
+.cpt-slider .slider-selelct.left {
+  left: 0;
+}
+ .cpt-slider .slider-selelct.right {
+   right: 0;
+} 
+.cpt-slider .slider-origin {
+  position: absolute;
+  bottom: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  font-size: 0;
+  position: absolute;
+  height: 10px;
+  line-height: 10px;
+}
+ .cpt-slider .slider-origin .span-origin {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 10px;
+  height: 10px;
+  background: #aaa;
+  font-size: 14px;
+  margin: 4px;
+  cursor: pointer;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+} 
+
+ .cpt-slider .slider-origin .span-origin.active {
+  background: red;
+  width: 25px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;	
+  border-radius: 5px;
+}
+.cpt-slider .slider-origin .span-origin.active.circle {
+  width: 10px;
+} 

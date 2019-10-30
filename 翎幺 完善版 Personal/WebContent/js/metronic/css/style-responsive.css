@@ -1,0 +1,267 @@
+@media all and (min-width:1280px)
+{
+.header .hor-menu {
+	margin-left: 99px;
+}
+}
+@media all and (max-width:1024px)
+{
+.header .hor-menu {
+	margin-left: 29px;
+}
+}
+@media all and (min-width:980px)
+{
+.page-sidebar {
+	width: 225px; position: absolute;
+}
+.page-sidebar ul {
+	width: 225px;
+}
+.page-content {
+	margin-top: 0px; margin-left: 225px; min-height: 860px;
+}
+.no-min-height.page-content {
+	min-height: auto;
+}
+.full-width-page .page-content {
+	margin-left: 0px !important;
+}
+}
+@media all and (max-width:979px)
+{
+body {
+	margin: 0px !important;
+}
+.header {
+	margin: 0px !important;
+}
+.header .nav li.dropdown i {
+	top: 1px; right: 0px; display: inline-block; position: relative;
+}
+.header .nav {
+	margin-bottom: 0px !important;
+}
+.page-container {
+	margin: 0px !important; padding: 0px !important;
+}
+.fixed-top .page-container {
+	margin-top: 0px !important;
+}
+.page-content {
+	margin: 0px !important; padding: 0px !important; min-height: 280px;
+}
+.page-sidebar {
+	margin: 0px 10px;
+}
+.in.page-sidebar {
+	margin: 10px; position: relative; z-index: 5;
+}
+.page-sidebar .sidebar-toggler {
+	display: none;
+}
+.page-sidebar ul {
+	width: 100%; margin-top: 0px;
+}
+.page-sidebar .selected {
+	display: none !important;
+}
+.page-sidebar .sidebar-search {
+	width: 220px; margin-top: 20px; margin-bottom: 20px;
+}
+.page-title {
+	margin: 15px 0px;
+}
+.styler-panel {
+	top: 55px; right: 20px;
+}
+}
+@media all and (max-width:1280px) and (min-width:768px)
+{
+.form-wizard .step .desc {
+	margin-top: 10px; display: block;
+}
+.pricing-table .rate .price {
+	width: 100%; text-align: center; margin-bottom: 10px; display: block;
+}
+.pricing-table2 .rate .price {
+	width: 100%; text-align: center; margin-bottom: 10px; display: block;
+}
+}
+@media all and (max-width:979px) and (min-width:768px)
+{
+body {
+	padding-top: 0px;
+}
+.page-sidebar .collapsed.btn-navbar .arrow {
+	display: none;
+}
+.page-sidebar .btn-navbar .arrow {
+	top: 50px; width: 0px; height: 0px; right: 25px; border-right-color: transparent; border-bottom-color: rgb(95, 100, 107); border-left-color: transparent; border-right-width: 15px; border-bottom-width: 15px; border-left-width: 15px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; position: absolute;
+}
+}
+@media all and (max-width:767px)
+{
+.header .navbar-inner .container-fluid {
+	margin-right: 10px !important; margin-left: 10px !important;
+}
+.header .navbar-inner .container {
+	margin-right: 10px !important; margin-left: 10px !important;
+}
+.header .top-nav .nav {
+	margin-top: 0px; margin-right: 5px;
+}
+.header .nav > li > .notification.dropdown-menu::after {
+	margin-right: 180px;
+}
+.header .nav > li > .notification.dropdown-menu::before {
+	margin-right: 180px;
+}
+.header .nav > li > .notification.dropdown-menu {
+	margin-right: -180px;
+}
+.header .nav > li > .inbox.dropdown-menu::after {
+	margin-right: 140px;
+}
+.header .nav > li > .inbox.dropdown-menu::before {
+	margin-right: 140px;
+}
+.header .nav > li > .inbox.dropdown-menu {
+	margin-right: -140px;
+}
+.header .nav > li > .tasks.dropdown-menu::after {
+	margin-right: 90px;
+}
+.header .nav > li > .tasks.dropdown-menu::before {
+	margin-right: 90px;
+}
+.header .nav > li > .tasks.dropdown-menu {
+	margin-right: -90px;
+}
+.page-content {
+	padding: 10px !important;
+}
+.page-title {
+	margin-bottom: 20px;
+}
+.styler-panel {
+	top: 58px; right: 12px;
+}
+.breadcrumb {
+	padding-right: 10px; padding-left: 10px;
+}
+.form.portlet-body .form-actions {
+	padding-left: 15px;
+}
+#gritter-notice-wrapper {
+	right: 1px !important;
+}
+.input-icon .input-error {
+	top: -27px; right: 10px !important; float: right;
+}
+.input-icon .input-warning {
+	top: -27px; right: 10px !important; float: right;
+}
+.input-icon .input-success {
+	top: -27px; right: 10px !important; float: right;
+}
+.table-advance tr td:first-child.highlight a {
+	margin-left: 8px;
+}
+.footer {
+	padding-right: 10px; padding-left: 10px;
+}
+.footer .go-top {
+	margin-top: -22px; margin-right: 0px; margin-bottom: 5px !important; float: right; display: block;
+}
+.ver-inline-menu li.active::after {
+	display: none;
+}
+.form-horizontal .form-actions {
+	padding-left: 180px;
+}
+.portlet .form-horizontal .form-actions {
+	padding-left: 190px;
+}
+}
+@media all and (max-width:480px)
+{
+.header .nav {
+	clear: both !important;
+}
+.header .nav > li.dropdown .dropdown-toggle {
+	margin-top: 3px !important;
+}
+.header .nav li.dropdown .dropdown-toggle .badge {
+	top: 11px;
+}
+.in.page-sidebar {
+	margin-top: 7px !important;
+}
+.styler-panel {
+	top: 92px; right: 12px;
+}
+.page-title small {
+	clear: both; display: block;
+}
+.page-content .breadcrumb .dashboard-date-range {
+	padding-bottom: 8px;
+}
+.page-content .breadcrumb .dashboard-date-range span {
+	display: none;
+}
+.login .logo {
+	margin-top: 10px;
+}
+.login .content {
+	padding: 30px; width: 222px;
+}
+.login .content h3 {
+	font-size: 22px;
+}
+.login .content .m-wrap {
+	width: 180px;
+}
+.login .checkbox {
+	font-size: 13px;
+}
+.form-bordered.form-horizontal .control-label {
+	width: auto; text-align: left; padding-top: 0px; margin-top: 0px; margin-left: 10px; float: none;
+}
+.form-bordered.form-horizontal .controls {
+	padding-top: 0px !important; border-left-color: currentColor !important; border-left-width: 0px !important; border-left-style: none !important;
+}
+.form-label-stripped.form-bordered.form-horizontal :nth-child(2n).control-group {
+	
+}
+.form-label-stripped.form-bordered.form-horizontal :nth-child(2n).control-group .controls {
+	
+}
+.form-row-seperated.form-horizontal .control-label {
+	width: auto; text-align: left; padding-top: 0px; margin-left: 10px; float: none;
+}
+.form-row-seperated.form-horizontal .controls {
+	margin-left: 10px; border-left-color: currentColor; border-left-width: 0px; border-left-style: none;
+}
+.portlet .form-horizontal .form-actions {
+	padding-left: 10px;
+}
+.hidden-480 {
+	display: none;
+}
+.modal-header .close {
+	margin-top: 5px !important;
+}
+.control-group .controls .text {
+	margin-bottom: 10px; display: block !important;
+}
+}
+@media all and (max-width:320px)
+{
+.header .nav > li.dropdown .dropdown-toggle {
+	padding-right: 8px !important; padding-left: 8px !important;
+}
+.hidden-320 {
+	display: none;
+}
+}

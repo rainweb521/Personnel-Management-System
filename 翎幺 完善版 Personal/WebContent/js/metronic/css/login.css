@@ -1,0 +1,252 @@
+@charset "utf-8";
+#header div.user{
+    display:none;
+}
+a:hover{
+	text-decoration:none;
+	color:RGB(46,144,254);
+}
+
+#header{
+    width:300px;
+    height:80px;
+    position:relative;
+}
+
+
+.container{
+    width:600px;
+    height:620px;
+    position:relative;
+}
+.bgPic{
+    position:absolute;
+    top:0;
+    left:0;
+    color: red;
+}
+.register{
+    width:360px;
+    height:360px;
+    background:rgba(255,255,255,1);
+    position:absolute;
+    top:40px;
+    left:300px;
+}
+.register>.title,.register>form,.register>.other_login{
+    width:280px;
+    margin:0 auto;
+}
+.register>.title{
+    margin-top:20px;
+    height:30px;
+}
+.register>.title>span{
+    width:40px;
+    height:30px;
+    font-size:18px;
+    color:#333;
+}
+.register>.title>a{
+    display:inline-block;
+    float:right;
+    font-size:14px;
+    color:#111;
+}
+.register>.title>a:hover{
+    color: #0d6eb1;
+    text-decoration:underline;
+}
+.register>.title>a::before{
+    content: "没有账号>>";
+    font-size:12px;
+}
+.register form>div{
+    height:38px;
+    margin-top:15px;
+    margin-bottom:5px;
+    position:relative;
+}
+.register form>div>input{
+    width:280px;
+    height:32px;
+    outline:none;
+    border-radius:3px;
+    border:1px solid #ccc;
+    padding-left:10px;
+    box-sizing:border-box;
+}
+.register form>div>p{
+    display:block;
+    border-radius:3px;
+    font-size:13px;
+    color:#fff;
+    position:absolute;
+    z-index:5;
+    top:-18px;
+    right:1px;
+    background:rgba(0,0,0,0.6);
+    transition:height 0.2s linear;
+    opacity:0;
+}
+.register form>div>label{
+    position:absolute;
+    left:14px;
+    background:#fff;
+    padding-left:5px;
+    padding-right:5px;
+    transition:all 0.1s linear;
+    cursor: text;
+}
+.register .show>p{
+    content: "用户名由3~8个数字和英文字符组成";
+    background: #414141;
+    opacity:1;
+}
+.register .show>input{
+    border-color:#279cd2;
+}
+.register .show>label{
+    top:-14px;
+    font-size:12px;
+    color:#279cd2;
+    opacity:1;
+}
+.register .default>p{
+    opacity:0;
+}
+.register .default>input{
+    border-color:#ccc;
+}
+.register .default>label{
+    font-size:13px;
+    top:7px;
+    color:#999;
+    opacity:1;
+}
+.register .blur>label{
+    top:-14px;
+    opacity:1 !important;
+}
+.register .error>p{
+    content: "用户名由3~8个数字和英文字符组成";
+    opacity:1;
+    background: #f02424;
+}
+.register .error>input{
+    border-color:#f02424;
+}
+.register .error>label{
+    top:-14px;
+    font-size:12px;
+    color:#f02424;
+    opacity:1;
+}
+
+.register form>div.submit{
+    height:80px;
+    margin-top:5px;
+}
+.register form .submit .notice{
+    display:block;
+    height:22px;
+    font-size:12px;
+    color:#666;
+    float:right;
+    margin-bottom:8px;
+}
+.register form .submit .notice>a{
+    color:#333;
+    text-decoration: underline;
+}
+.register form .submit .notice>a:hover{
+    color:rgb(229,58,49);
+}
+.register form>div.submit button{
+    display:block;
+    width:280px;
+    line-height:38px;
+    outline:none;
+    border:none;
+    text-align:center;
+    border-radius:3px;
+    background:linear-gradient(to bottom,rgb(239,91,84),rgb(239,91,84));
+    font-size:16px;
+    color:white;
+    cursor: pointer;
+}
+.s_hover{
+    background:linear-gradient(to bottom, rgb(239,91,84),rgb(239,91,84)) !important;
+}
+.register .other_login{
+    height:80px;
+    margin-top:5px;
+    /*background: #cbcec5;*/
+}
+.register .other_login .log{
+    height:18px;
+    border-bottom:1px solid #999;
+    box-sizing:border-box;
+}
+.register .other_login .log>span{
+    width:86px;
+    font-size:14px;
+    color:#777;
+    display:block;
+    margin:0 auto;
+    padding-top:6px;
+    padding-left:5px;
+    padding-right:5px;
+    background:#fff;
+}
+.register .other_login .icon{
+    height:60px;
+}
+.register .other_login .icon >ul>li{
+    float:left;
+    width:90px;
+    margin-left:5px;
+    line-height:60px;
+    position:relative;
+}
+.register .other_login .icon >ul>li:first-child{
+    margin-left:0;
+}
+.register .other_login .icon >ul>li>img{
+    margin:0 29px;
+}
+[data-log=icon]>img{
+    width:32px;
+    height:32px;
+    transition:all 0.2s linear;
+}
+[data-log=icon]>span{
+    opacity:1;
+    position:absolute;
+    top:-17px;
+    left:13px;
+    width:64px;
+    line-height:26px;
+    text-align:center;
+    background: #727272;
+    color:#fff;
+    border-radius:3px;
+    font-size:13px;
+    transition:all 0.2s linear;
+}
+.icon .i_hover>img{
+    -webkit-filter: contrast(0%);
+    -ms-filter: contrast(0%);
+    -o-filter: contrast(0%);
+    filter: contrast(0%);
+}
+.icon .i_hover>span{
+    opacity:0;
+    position:absolute;
+    top:15px;
+}
+
+#footer{
+    width:1360px;
+    height:40px;
+}

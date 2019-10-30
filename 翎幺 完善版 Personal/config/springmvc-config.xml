@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd     
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+        
+        
+   <mvc:resources location="/WEB-INF/upload/" mapping="/upload/**"/>
+        
+    <!-- 自动扫描该包，SpringMVC会将包下用了@controller注解的类注册为Spring的controller -->
+    <context:component-scan base-package="ahualy.neepu.controller"/>
+    <!-- 设置默认配置方案 -->
+    <mvc:annotation-driven/>
+    <!-- 使用默认的Servlet来响应静态文件 -->
+    <mvc:default-servlet-handler/>
+        <!-- 定义Spring MVC的拦截器 -->
+    <mvc:interceptors>
+    	<mvc:interceptor>
+    		<!-- 拦截所有请求 -->
+    		<mvc:mapping path="/*"/>
+    		<!-- 自定义判断用户权限的拦截类 -->  
+    	 	<bean class="ahualy.neepu.interceptor.AuthorizedInterceptor"/>
+    	</mvc:interceptor>
+    </mvc:interceptors>
+    <!-- 视图解析器  -->
+     <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver"> 
+        <!-- 前缀 -->
+        <property name="prefix">
+            <value>/WEB-INF/jsps/</value>
+        </property>
+        <!-- 后缀 -->
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+    </bean>
+    <bean id="multipartResolver"  
+        class="org.springframework.web.multipart.commons.CommonsMultipartResolver">  
+		<!-- 上传文件大小上限，单位为字节（10MB） -->
+        <property name="maxUploadSize">  
+            <value>38456584</value>  
+                   
+        </property>  
+        <!-- 内存中的最大值 -->  
+        <property name="maxInMemorySize" value="1" />    
+        <!-- 请求的编码格式，必须和jSP的pageEncoding属性一致，以便正确读取表单的内容，默认为ISO-8859-1 -->
+        <property name="defaultEncoding">
+        	<value>UTF-8</value>
+        </property>
+    </bean>
+    
+</beans>

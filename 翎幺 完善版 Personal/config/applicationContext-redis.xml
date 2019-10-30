@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:mybatis="http://mybatis.org/schema/mybatis-spring"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:cache="http://www.springframework.org/schema/cache"  
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+			            http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+			            http://www.springframework.org/schema/context
+			            http://www.springframework.org/schema/context/spring-context-4.2.xsd
+			            http://www.springframework.org/schema/mvc
+			            http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+			            http://www.springframework.org/schema/tx
+			            http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+			            http://www.springframework.org/schema/cache
+        				http://www.springframework.org/schema/cache/spring-cache-4.2.xsd
+			            http://mybatis.org/schema/mybatis-spring 
+			            http://mybatis.org/schema/mybatis-spring.xsd ">
+			
+	<!-- ==========================redis缓存配置======================== -->
+	
+    <cache:annotation-driven cache-manager="redisCacheManager"/>
+	
+	<!-- 引入数据库配置文件 -->
+    <bean id="propertyConfigurer"    class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <property name="locations">
+        <list>
+            <value>classpath:db.properties</value>
+            <value>classpath:redis.properties</value>
+        </list>
+    </property>
+    </bean>
+	
+	<!-- redis数据源 -->
+	<bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">
+    	<property name="maxIdle" value="${redis.maxIdle}" />
+    	<property name="maxTotal" value="${redis.maxActive}" />
+    	<property name="maxWaitMillis" value="${redis.maxWait}" />
+    	<property name="testOnBorrow" value="${redis.testOnBorrow}" />
+	</bean>
+	
+	<!-- Spring-redis连接池管理工厂 -->
+	<bean id="jedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
+   	 p:host-name="${redis.host}" p:port="${redis.port}" p:password="${redis.pass}"  p:pool-config-ref="poolConfig"/>
+	
+	<!-- 使用中间类解决RedisCache.jedisConnectionFactory的静态注入，从而使MyBatis实现第三方缓存 -->
+	<bean id="redisCacheTransfer" class="ahualy.neepu.cache.RedisCacheTransfer">
+    	<property name="jedisConnectionFactory" ref="jedisConnectionFactory"/>
+	</bean>
+	
+	<!--redis操作模版,使用该对象可以操作redis  -->  
+    <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate" >    
+        <property name="connectionFactory" ref="jedisConnectionFactory" />    
+        <!--如果不配置Serializer，那么存储的时候缺省使用String，如果用User类型存储，那么会提示错误User can't cast to String！！  -->    
+        <property name="keySerializer" >    
+            <bean class="org.springframework.data.redis.serializer.StringRedisSerializer" />    
+        </property>    
+        <property name="valueSerializer" >    
+            <bean class="org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer" />    
+        </property>    
+        <property name="hashKeySerializer">    
+            <bean class="org.springframework.data.redis.serializer.StringRedisSerializer"/>    
+        </property>    
+        <property name="hashValueSerializer">    
+            <bean class="org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer"/>    
+        </property>    
+        <!--开启事务  -->  
+        <property name="enableTransactionSupport" value="true"></property>  
+    </bean >   
+	
+	<!-- 配置RedisCacheConfig -->
+    <bean id="redisCacheConfig" class="ahualy.neepu.cache.RedisCacheConfig">
+        <constructor-arg ref="jedisConnectionFactory"/>
+        <constructor-arg ref="redisTemplate"/>
+        <constructor-arg ref="redisCacheManager"/>
+    </bean>
+	
+	<!-- 配置RedisCacheManager -->
+    <bean id="redisCacheManager" class="org.springframework.data.redis.cache.RedisCacheManager">
+        <constructor-arg name="redisOperations" ref="redisTemplate" />
+    </bean>
+	
+	<!-- ===================================================================  -->
+	
+</beans>
