@@ -198,7 +198,7 @@ CREATE TABLE `document_inf` (
 -- ----------------------------
 -- Records of document_inf
 -- ----------------------------
-INSERT INTO `document_inf` VALUES ('1', '实习协议', '实习协议.doc', '实习协议文档', '2019-05-19 10:37:39', '1');
+INSERT INTO `document_inf` VALUES ('1', '实习协议', '实习协议.doc', '实习协议文档信息', '2019-05-19 10:37:39', '1');
 
 -- ----------------------------
 -- Table structure for education_inf
@@ -245,8 +245,8 @@ CREATE TABLE `employee_inf` (
 -- Records of employee_inf
 -- ----------------------------
 INSERT INTO `employee_inf` VALUES ('1', '1', '7', '爱丽丝', '432801197711251052', '浙江省杭州市', '13902001111', '2', '3', '2019-05-09 19:45:59', '1');
-INSERT INTO `employee_inf` VALUES ('3', '1', '3', '花袭人', '620523199410103810', '江苏省南京市', '15593380565', '2', '3', '2019-05-11 13:19:32', '3');
-INSERT INTO `employee_inf` VALUES ('5', '3', '9', '花翎幺', '620523199810103810', '甘肃省兰州市', '17646603626', '1', '3', '2019-04-15 15:44:57', '5');
+INSERT INTO `employee_inf` VALUES ('3', '1', '3', '袭人', '620523199410103810', '江苏省南京市', '13902001111', '2', '3', '2019-05-11 13:19:32', '3');
+INSERT INTO `employee_inf` VALUES ('5', '3', '9', '翎幺', '620523199810103810', '甘肃省兰州市', '13902001111', '1', '3', '2019-04-15 15:44:57', '5');
 
 -- ----------------------------
 -- Table structure for jobtype_inf
@@ -463,11 +463,11 @@ CREATE TABLE `resume_inf` (
 -- ----------------------------
 -- Records of resume_inf
 -- ----------------------------
-INSERT INTO `resume_inf` VALUES ('1', '设计方向', 'UI设计工程师', '花翎幺', '17649603626@163.com', '1', '2', '17649603626', '2', '安斌杰-苏州简历(2019年5月版) .pdf', '2019-06-03 20:27:12');
-INSERT INTO `resume_inf` VALUES ('2', '技术方向', 'C++开发工程师', '花翎幺', '17649603626@163.com', '1', '1', '17649603626', '1', '安斌杰-苏州简历(2019年5月版) .pdf', '2019-06-04 08:55:09');
-INSERT INTO `resume_inf` VALUES ('3', '市场与职能方向', '行政专员', '安安', '15593380565@163.com', '1', '2', '15593380565', '1', '安斌杰-西安简历(2019年5月版) .pdf', '2019-06-04 09:41:18');
-INSERT INTO `resume_inf` VALUES ('4', '产品方向', '产品研发工程师', '都受到', '15336014045@163.com', '2', '4', '17649603626', '2', '安斌杰-简历(2019年6月版) .pdf', '2019-06-04 10:30:18');
-INSERT INTO `resume_inf` VALUES ('5', '客户服务', '客服专员', '苟富贵', '1875205395@qq.com', '1', '3', '17649603626', '1', '安斌杰-简历(2019年6月版) .pdf', '2019-06-04 10:30:54');
+INSERT INTO `resume_inf` VALUES ('1', '设计方向', 'UI设计工程师', '翎幺', '13902001111@163.com', '1', '2', '13902001111', '2', '翎幺-苏州简历(2019年5月版) .pdf', '2019-06-03 20:27:12');
+INSERT INTO `resume_inf` VALUES ('2', '技术方向', 'C++开发工程师', '翎幺', '13902001111@163.com', '1', '1', '13902001111', '1', '翎幺-苏州简历(2019年5月版) .pdf', '2019-06-04 08:55:09');
+INSERT INTO `resume_inf` VALUES ('3', '市场与职能方向', '行政专员', '安安', '13902001111@163.com', '1', '2', '13902001111', '1', '翎幺-西安简历(2019年5月版) .pdf', '2019-06-04 09:41:18');
+INSERT INTO `resume_inf` VALUES ('4', '产品方向', '产品研发工程师', '都受到', '13902001111@163.com', '2', '4', '13902001111', '2', '翎幺-简历(2019年6月版) .pdf', '2019-06-04 10:30:18');
+INSERT INTO `resume_inf` VALUES ('5', '客户服务', '客服专员', '苟富贵', '13902001111@qq.com', '1', '3', '13902001111', '1', '翎幺-简历(2019年6月版) .pdf', '2019-06-04 10:30:54');
 
 -- ----------------------------
 -- Table structure for salary_inf
@@ -636,27 +636,9 @@ CREATE TABLE `uservisit_inf` (
 -- ----------------------------
 -- Records of uservisit_inf
 -- ----------------------------
-INSERT INTO `uservisit_inf` VALUES ('1', '2019-02-12 09:13:56', '2019-02-12 20:10:21', '117.157.184.39', '甘肃天水 移动', '移动端', 'Chrome', 'Android', '57.0.2987.132', 'admin', 'HUAWEIFIG-AL10');
-INSERT INTO `uservisit_inf` VALUES ('2', '2019-02-12 09:16:46', '2019-02-12 20:10:21', '117.157.180.39', '甘肃天水 移动', 'PC端', 'Firefox', 'Windows', '65.0', 'admin', 'Windows NT 10.0; Win64; x64');
-INSERT INTO `uservisit_inf` VALUES ('3', '2019-02-12 09:17:19', '2019-02-12 20:10:21', '124.152.216.170', '甘肃 联通', '移动端', 'Mobile Safari', 'Android', '4.0', 'admin', 'HUAWEICLT-AL00');
-INSERT INTO `uservisit_inf` VALUES ('4', '2019-02-12 09:17:46', '2019-02-12 20:10:21', '117.157.184.39', '甘肃天水 移动', '移动端', 'Chrome', 'Android', '57.0.2987.132', 'admin', 'HONORLND-AL30');
-INSERT INTO `uservisit_inf` VALUES ('5', '2019-02-12 09:20:33', '2019-02-12 20:10:21', '223.104.57.125', '甘肃天水 移动', '移动端', 'Chrome', 'Android', '53.0.2785.134', 'afj', 'MMB29M');
-INSERT INTO `uservisit_inf` VALUES ('6', '2019-02-12 09:59:31', '2019-02-12 20:10:21', '117.157.180.39', '甘肃天水 移动', 'PC端', 'Firefox', 'Windows', '65.0', 'anan', 'Windows NT 10.0; Win64; x64');
-INSERT INTO `uservisit_inf` VALUES ('7', '2019-02-12 09:59:49', '2019-02-12 20:10:21', '117.157.180.39', '甘肃天水 移动', 'PC端', 'Firefox', 'Windows', '65.0', 'admin', 'Windows NT 10.0; Win64; x64');
-INSERT INTO `uservisit_inf` VALUES ('8', '2019-02-12 10:03:23', '2019-02-12 20:10:21', '117.157.180.39', '甘肃天水 移动', 'PC端', 'Firefox', 'Windows', '65.0', 'admin', 'Windows NT 10.0; Win64; x64');
-INSERT INTO `uservisit_inf` VALUES ('9', '2019-02-12 10:05:04', '2019-02-12 20:10:21', '117.157.180.39', '甘肃天水 移动', 'PC端', 'Firefox', 'Windows', '65.0', 'admin', 'Windows NT 10.0; Win64; x64');
-INSERT INTO `uservisit_inf` VALUES ('10', '2019-02-12 10:08:56', '2019-02-12 20:10:21', '117.157.180.39', '甘肃天水 移动', 'PC端', 'Firefox', 'Windows', '65.0', 'admin', 'Windows NT 10.0; Win64; x64');
-INSERT INTO `uservisit_inf` VALUES ('11', '2019-03-03 19:39:07', '2019-03-03 20:15:53', '111.26.180.105', '吉林吉林市 移动', 'PC端', 'Chrome', 'Windows', '70.0.3538.102', 'anan', 'Windows NT 10.0; Win64');
-INSERT INTO `uservisit_inf` VALUES ('12', '2019-03-05 20:32:40', '2019-03-05 20:32:47', '111.26.180.105', '吉林吉林市 移动', 'PC端', 'Chrome', 'Windows', '70.0.3538.102', 'admin', 'Windows NT 10.0; Win64');
-INSERT INTO `uservisit_inf` VALUES ('13', '2019-03-05 20:48:24', '2019-03-05 20:51:09', '111.26.180.105', '吉林吉林市 移动', 'PC端', 'Chrome', 'Windows', '70.0.3538.102', 'admin', 'Windows NT 10.0; Win64');
-INSERT INTO `uservisit_inf` VALUES ('14', '2019-03-05 21:13:22', '2019-03-05 21:13:52', '111.26.180.105', '吉林吉林市 移动', 'PC端', 'Chrome', 'Windows', '70.0.3538.102', 'manager', 'Windows NT 10.0; Win64');
-INSERT INTO `uservisit_inf` VALUES ('15', '2019-03-05 21:14:10', '2019-03-05 21:14:41', '111.26.180.105', '吉林吉林市 移动', 'PC端', 'Chrome', 'Windows', '70.0.3538.102', 'admin', 'Windows NT 10.0; Win64');
-INSERT INTO `uservisit_inf` VALUES ('16', '2019-06-02 13:17:43', '2019-06-02 13:47:14', '127.0.0.1', null, 'PC端', 'Chrome', 'Windows', '74.0.3729.131', 'admin', 'Windows NT 10.0; Win64');
-INSERT INTO `uservisit_inf` VALUES ('17', '2019-06-03 20:41:37', '2019-06-03 20:46:49', '127.0.0.1', null, 'PC端', 'Chrome', 'Windows', '74.0.3729.131', 'admin', 'Windows NT 10.0; Win64');
-INSERT INTO `uservisit_inf` VALUES ('18', '2019-06-03 20:47:01', '2019-06-03 20:47:07', '127.0.0.1', null, 'PC端', 'Chrome', 'Windows', '74.0.3729.131', 'ahualy', 'Windows NT 10.0; Win64');
-INSERT INTO `uservisit_inf` VALUES ('19', '2019-06-03 21:08:19', '2019-06-03 21:08:41', '127.0.0.1', null, 'PC端', 'Chrome', 'Windows', '74.0.3729.131', 'admin', 'Windows NT 10.0; Win64');
-INSERT INTO `uservisit_inf` VALUES ('20', '2019-06-04 07:59:59', '2019-06-04 08:02:05', '127.0.0.1', null, 'PC端', 'Chrome', 'Windows', '74.0.3729.131', 'admin', 'Windows NT 10.0; Win64');
-INSERT INTO `uservisit_inf` VALUES ('21', '2019-06-04 08:02:32', '2019-06-04 08:05:50', '127.0.0.1', null, 'PC端', 'Chrome', 'Windows', '74.0.3729.131', 'admin', 'Windows NT 10.0; Win64');
+INSERT INTO `uservisit_inf` VALUES ('1', '2019-02-12 09:13:56', '2019-02-12 20:10:21', '117.157.184.39', '北京 移动', '移动端', 'Chrome', 'Android', '57.0.2987.132', 'admin', 'HUAWEIFIG-AL10');
+INSERT INTO `uservisit_inf` VALUES ('2', '2019-02-12 09:16:46', '2019-02-12 20:10:21', '117.157.180.39', '北京 移动', 'PC端', 'Firefox', 'Windows', '65.0', 'admin', 'Windows NT 10.0; Win64; x64');
+INSERT INTO `uservisit_inf` VALUES ('3', '2019-02-12 09:17:19', '2019-02-12 20:10:21', '124.152.216.170', '北京 联通', '移动端', 'Mobile Safari', 'Android', '4.0', 'admin', 'HUAWEICLT-AL00');
 
 -- ----------------------------
 -- Table structure for user_inf
@@ -682,8 +664,8 @@ CREATE TABLE `user_inf` (
 -- ----------------------------
 INSERT INTO `user_inf` VALUES ('1', 'admin', '9f5964c2aec4dc3a56cfa77ad6cc3bbb', '', '1', '2019-04-15 15:35:40', '超级管理员', null, null, null, null);
 INSERT INTO `user_inf` VALUES ('2', 'manager', '7304b1d41dbd735711f9e25db40b4f63', '', '1', '2019-04-15 15:35:43', '总经理', null, null, null, null);
-INSERT INTO `user_inf` VALUES ('3', 'anana', '7ac6e9b93d3e3ecc13968f6cc53a9093', 'wulidxh5534@163.com', '1', '2019-05-08 10:36:57', '安安', '1', '1', '1', '1');
-INSERT INTO `user_inf` VALUES ('4', 'dxh', '33374c88e3a7570c211c203b4795fc24', '1875205395@qq.com', '2', '2019-05-30 16:08:41', '猪头', '3', '3', '3', '3');
-INSERT INTO `user_inf` VALUES ('5', 'ahualy', '0246876c1c966a36923ceb77c1d82e3a', '17649603626@163.com', '1', '2019-05-18 09:04:08', '测试', '5', '5', '5', '5');
-INSERT INTO `user_inf` VALUES ('6', 'Leetcode', '28621d88e9551ce4086aa466239ecb16', '15336014045@163.com', '1', '2019-04-17 08:40:33', '铭星', '8', '8', '8', '8');
-INSERT INTO `user_inf` VALUES ('7', 'Think', '94596cc80b6cf1e974856d3715723d4a', '18752053@qq.com', '1', '2019-05-21 08:22:57', '袭人', '9', '9', '9', '9');
+INSERT INTO `user_inf` VALUES ('3', 'dsds', '7ac6e9b93d3e3ecc13968f6cc53a9093', '13902001111@163.com', '1', '2019-05-08 10:36:57', '测试1', '1', '1', '1', '1');
+INSERT INTO `user_inf` VALUES ('4', 'dfre', '33374c88e3a7570c211c203b4795fc24', '13902001111@qq.com', '2', '2019-05-30 16:08:41', '翎幺', '3', '3', '3', '3');
+INSERT INTO `user_inf` VALUES ('5', 'ahualy', '0246876c1c966a36923ceb77c1d82e3a', '13902001111@163.com', '1', '2019-05-18 09:04:08', '测试', '5', '5', '5', '5');
+INSERT INTO `user_inf` VALUES ('6', 'Leetcode', '28621d88e9551ce4086aa466239ecb16', '13902001111@163.com', '1', '2019-04-17 08:40:33', '铭星', '8', '8', '8', '8');
+INSERT INTO `user_inf` VALUES ('7', 'Think', '94596cc80b6cf1e974856d3715723d4a', '13902001111@qq.com', '1', '2019-05-21 08:22:57', '袭人', '9', '9', '9', '9');
