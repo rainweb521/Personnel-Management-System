@@ -607,7 +607,7 @@
     <!-- 中部结束 -->
     <!-- 底部开始 -->
     <div class="footer" style="background-color:RGB(43,48,59)">
-        <div class="copyright" align="center"style="background-color:RGB(43,48,59)">Copyright ©2019 东北电力大学计算机学院</div>  
+        <div class="copyright" align="center"style="background-color:RGB(43,48,59)">Copyright ©2019 </div>  
     </div>
     <!-- 底部结束 -->
  

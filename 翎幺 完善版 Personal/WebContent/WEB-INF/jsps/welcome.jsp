@@ -140,16 +140,16 @@ goEasy.subscribe({
                     <tbody>
                         <tr>
                             <th>版权所有</th>
-                            <td>东北电力大学计算机学院</td>
+                            <td>翎幺</td>
                         </tr>
                         <tr>
                             <th>开发者</th>
-                            <td>安斌杰</td></tr>
+                            <td>翎幺</td></tr>
                     </tbody>
                 </table>
             </div>
         </fieldset>
-        <blockquote class="layui-elem-quote layui-quote-nm">感谢倪老师的指导！</blockquote>
+        <blockquote class="layui-elem-quote layui-quote-nm">感谢XXX老师的指导！</blockquote>
     </div>
         <script>
         var _hmt = _hmt || [];

@@ -97,7 +97,7 @@ body{
       </div>
        <!-- 底部开始 -->
      <div style="width: 1360px;height:48px; background-color:RGB(43,48,59) ;margin-top:610px;">
-        <div align="center" style="padding-top:15px;color:RGB(153,153,153);">Copyright ©2019 东北电力大学计算机学院</div>
+        <div align="center" style="padding-top:15px;color:RGB(153,153,153);">Copyright ©2019 </div>
     </div>
    		 <!-- 底部结束 -->
     
