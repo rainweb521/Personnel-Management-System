@@ -1,7 +1,6 @@
 # 人事管理系统
 
 ## 因为同学答辩已经完成，项目暂时不会再做更新，有需要的朋友可以自行完善。
-## 新增加了简历投递，审核审批，视频上传，在线播放等功能，请前往查看。[https://gitee.com/ahualy/Personal](https://gitee.com/ahualy/Personal)
 
 ## 部署说明：
 ### 项目启动后，在浏览器中访问地址：http://127.0.0.1:8080/personnel/
